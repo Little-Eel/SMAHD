@@ -2,25 +2,7 @@
 
 <img width="2850" height="1924" alt="框架图" src="https://github.com/user-attachments/assets/7689fb76-6bab-4f3f-a8ca-010c46686150" />
 
-High-resolution spatial multi-omics technologies now enable the joint measurement of transcriptomic, proteomic, and epigenomic signals within intact tissues,
-but the resulting datasets remain difficult to analyze because of severe crossmodal heterogeneity, transcriptomic sparsity, and the memory cost of full-graph
-learning. Existing integration methods perform well on moderate-scale data, yet
-often become impractical when spatial resolution increases or when multiple
-omics views must be modeled jointly.
-We present SMAHD (Scalable graph autoencoder for spatial Multi-omics Analysis of High-resolution spatial omics Data), a scalable graph autoencoder for
-high-resolution spatial multi-omics integration. SMAHD combines micro-clusterbased subgraph sampling with parallel view-specific graph attention encoders and
-a weighted multi-view reconstruction objective. This design preserves local spatial topology while enabling efficient training on large graphs under limited GPU
-memory.
-Across simulated and real spatial multi-omics datasets, including human tonsil,
-mouse brain transcriptome–epigenome data, and large Stereo-CITE-seq mouse
-spleen data, SMAHD achieves strong clustering accuracy, favorable algorithmic
-stability, and substantially lower memory usage than competing methods. In
-particular, SMAHD maintains a peak GPU memory footprint below 500 MiB
-across Stereo-CITE-seq resolution levels up to 756,430 spatial locations while
-preserving robust performance under extreme high-resolution sparsity.
-These results show that SMAHD provides a practical and accurate framework for
-scalable spatial multi-omics integration in next-generation high-resolution spatial
-omics studies.
+High-resolution spatial multi-omics technologies now enable the joint measurement of transcriptomic, proteomic, and epigenomic signals within intact tissues, but the resulting datasets remain difficult to analyze because of severe crossmodal heterogeneity, transcriptomic sparsity, and the memory cost of full-graph learning.Existing integration methods perform well on moderate-scale data, yet often become impractical when spatial resolution increases or when multiple omics views must be modeled jointly.
 
 # Installation
 
