@@ -1,28 +1,45 @@
-# STAHD: a scalable and accurate method to detect spatial domains in high-resolution spatial transcriptomics data
+# SMAHD：a scalable graph autoencoder for spatial multi-omics analysis of high-resolution spatial transcriptomics data
 
-![图片1](https://github.com/user-attachments/assets/6fc87200-a4d5-44ce-b6db-b66687adec7f)
+<img width="2850" height="1924" alt="框架图" src="https://github.com/user-attachments/assets/7689fb76-6bab-4f3f-a8ca-010c46686150" />
 
-- Motivation: Spatial transcriptomics (ST) enables the study of spatial heterogeneity in tissues. However, current methods struggle with large-scale, high-resolution data, leading to reduced efficiency and accuracy in detecting spatial domains. A scalable, precise solution is urgently needed.
-- Results: We present STAHD, a scalable and efficient framework for spatial domain detection in ST data. Combining a graph attention autoencoder with multilevel k-way graph partitioning, STAHD decomposes large graphs into compact subgraphs and generates low-dimensional embeddings. This improves computational efficiency and clustering accuracy. Benchmarks on human and mouse datasets show STAHD outperforms existing methods and accurately reveals spatially distinct tumor microenvironments and functional regions.
+High-resolution spatial multi-omics technologies now enable the joint measurement of transcriptomic, proteomic, and epigenomic signals within intact tissues,
+but the resulting datasets remain difficult to analyze because of severe crossmodal heterogeneity, transcriptomic sparsity, and the memory cost of full-graph
+learning. Existing integration methods perform well on moderate-scale data, yet
+often become impractical when spatial resolution increases or when multiple
+omics views must be modeled jointly.
+We present SMAHD (Scalable graph autoencoder for spatial Multi-omics Analysis of High-resolution spatial omics Data), a scalable graph autoencoder for
+high-resolution spatial multi-omics integration. SMAHD combines micro-clusterbased subgraph sampling with parallel view-specific graph attention encoders and
+a weighted multi-view reconstruction objective. This design preserves local spatial topology while enabling efficient training on large graphs under limited GPU
+memory.
+Across simulated and real spatial multi-omics datasets, including human tonsil,
+mouse brain transcriptome–epigenome data, and large Stereo-CITE-seq mouse
+spleen data, SMAHD achieves strong clustering accuracy, favorable algorithmic
+stability, and substantially lower memory usage than competing methods. In
+particular, SMAHD maintains a peak GPU memory footprint below 500 MiB
+across Stereo-CITE-seq resolution levels up to 756,430 spatial locations while
+preserving robust performance under extreme high-resolution sparsity.
+These results show that SMAHD provides a practical and accurate framework for
+scalable spatial multi-omics integration in next-generation high-resolution spatial
+omics studies.
 
 # Installation
 
-STAHD is built with Scanpy, PyTorch, and PyG, and supports both GPU (preferred) and CPU execution.
+SMAHD is built with Scanpy, PyTorch, and PyG, and supports both GPU (preferred) and CPU execution.
 First clone the repository.
 
 ```
-git clone https://github.com/Little-Eel/STAHD.git
-cd STAligner-main
+git clone https://github.com/Little-Eel/SMAHD.git
+cd SMAHD
 ```
 
-It's recommended to create a separate conda environment for running STAHD:
+It's recommended to create a separate conda environment for running SMAHD:
 
 ```
-#create an environment called env_STAHD
-conda create -n env_STAHD python=3.8
+#create an environment called env_SMAHD
+conda create -n env_SMAHD python=3.8
 
 #activate your environment
-conda activate env_STAHD
+conda activate env_SMAHD
 ```
 
 Install all the required packages.
@@ -42,7 +59,7 @@ The use of the mclust algorithm requires the rpy2 package (Python) and the mclus
 
 The torch-geometric library is also required, please see the installation steps in https://github.com/pyg-team/pytorch_geometric#installation
 
-Install STAHD.
+Install SMAHD.
 
 ```
 python setup.py build
