@@ -68,16 +68,4 @@ python setup.py install
 
 # Datasets
 
-All spatial transcriptomics datasets used in this study are publicly available. Detailed sources and download links are listed below:10x Visium human dorsolateral prefrontal cortex (DLPFC) da-taset and tutorials:
-https://support.10xgenomics.com/spatial-gene-expression/datasets/1.2.0/V1_Human_DLPFC .
 
-Xenium platform whole adult mouse brain dataset (xenium_whole_adult_mouse),including data and tutorials:
-https://www.10xgenomics.com/datasets/xenium-prime-ffpe-neonatal-mouse. 
-
-CosMx SMI human lymph node dataset (Cosmx lymph) from NanoS-tring:https://nanostring.com/products/cosmx-spatial-molecular-imager/ffpe-dataset/cosmx-human-lymph-node-ffpe-dataset/. 
-
-10x Genomics Visium-HD human breast cancer dataset (FFPE-IF):
-https://www.10xgenomics.com/datasets/visium-hd-cytassist-gene-expression-libraries-human-breast-cancer-ffpe-if. 
-
-10x Genomics Visium-HD human tonsil dataset (fresh frozen, IF):
-https://www.10xgenomics.com/datasets/visium-hd-cytassist-gene-expression-human-tonsil-fresh-frozen-if
